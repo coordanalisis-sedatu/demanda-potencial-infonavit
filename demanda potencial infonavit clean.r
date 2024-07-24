@@ -64,8 +64,8 @@ ordenar_datos <- function(data, anio_levels, mes_levels) {
 
 #------------------------------------------------------------------------------- # Leer archivos CSV
 archivos <- list(
-  "C:/Users/quetz/Documents/Sedatu archivos/dp_infonavit/demanda portencial infonavit original  2014-2016.csv",
-  "C:/Users/quetz/Documents/Sedatu archivos/dp_infonavit/demanda portencial infonavit original  2017-2023.csv"
+  "https://github.com/coordanalisis-sedatu/demanda-potencial-infonavit/raw/main/demanda%20portencial%20infonavit%20original%20%202014-2016.csv",
+  "https://raw.githubusercontent.com/coordanalisis-sedatu/demanda-potencial-infonavit/main/demanda%20portencial%20infonavit%20original%20%202017-2023.csv"
 )
 
 # Cargar y limpiar los datos
@@ -112,7 +112,7 @@ str(dp_list)
 
 
 #------------------------------------------------------------------------------- Leer catálogo
-c <- read_csv("C:/Users/quetz/Documents/Sedatu archivos/catalogo.csv")
+c <- read_csv("https://raw.githubusercontent.com/coordanalisis-sedatu/demanda-potencial-infonavit/main/catalogo.csv")
 c <- as.data.frame(c) # Convertir el objeto 'table' a 'data.frame'
 str(c)
   
@@ -168,7 +168,6 @@ dp_list <- as.data.frame(dp_list) # Convertir el objeto 'table' a 'data.frame'
 
 
 ######################
-library(readr)
 
 # Nombres de los archivos CSV
 nombres_archivos <- c("dp_list_1.csv", "dp_list_2.csv")
@@ -181,8 +180,3 @@ lapply(seq_along(dp_list), function(i) {
 # Confirmar que los archivos se han guardado
 print("Archivos CSV guardados:")
 print(nombres_archivos)
-
-
-
-
-
